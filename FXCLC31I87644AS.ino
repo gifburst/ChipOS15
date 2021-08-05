@@ -64,11 +64,6 @@ const char* menuText[] = { // row/column
   "CLOCK",
   "FITNESS",
   "PICTURES",
-  "PHONEBOOK",
-  "WEATHER",
-  "MUSIC",
-  "UTILITY",
-  "DISK MANAGER"
 };
 const char* nameText[] = { // row/column
   "R. SARAFAN",
@@ -115,23 +110,7 @@ void setup() {
   tft.fillScreen(APL_BLACK);
   tft.setTextColor(APL_GREEN, APL_BLACK);
   tft.setRotation(screenRotation);
-  /*
-  tft.invertDisplay(true);
-  tft.drawLine(0, 0, tft.width()-1, y, color);
-  tft.setTextSize(1);
-  tft.setCursor(0, 0);
-  tft.setTextColor(color);
-  tft.setTextWrap(true);
-  tft.print(text);
-  tft.drawChar(35, 0, ']', APL_GREEN, APL_BLACK, 1);
-  tft.drawFastHLine(0, y, tft.width(), color1);
-  tft.drawFastVLine(x, 0, tft.height(), color2);
-  tft.drawRect(tft.width()/2 -x/2, tft.height()/2 -x/2 , x, x, color);
-  tft.fillRect(tft.width()/2 -x/2, tft.height()/2 -x/2 , x, x, color1);
-  tft.fillCircle(x, y, radius, color);
-  tft.drawCircle(x, y, radius, color);
-  tft.drawTriangle(w, y, y, x, z, x, color);
-  tft.drawRoundRect(x, y, w, h, 5, color);*/
+
   mp3.playTrack(1); // play first track on the SD card (tracks aren't zero indexed)
   setScreen(ON);
   for (int rr = 0; rr < 216; rr++){ // 
@@ -150,7 +129,6 @@ void setup() {
   drawMenuScreen();
 
   
-} // **************************************************************** END SETUP ****************************************************************
 
 void loop(){
   
@@ -297,7 +275,7 @@ void drawMenuScreen(){
 
 void printAppleII(){
   tft.setCursor(54, 0);
-  tft.print("APPLE");
+  tft.print("ChipLet");
   drawSymbol(APL_CB, 35+54, 0);
   drawSymbol(APL_OB, 41+54, 0);
 }
