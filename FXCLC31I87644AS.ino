@@ -1,6 +1,3 @@
-// APPLE ][ WATCH 
-// Designed and Built for Instructables.com by DJ Harrigan in San Francisco, CA
-// January 2, 2015
 #include <Adafruit_GFX.h>    // Core graphics library
 #include <Adafruit_ST7735.h> // Hardware-specific library
 #include <SoftwareSerial.h>
